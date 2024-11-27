@@ -1,0 +1,182 @@
+/* Ogólne ustawienia */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Sekcje */
+main {
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #4CAF50;
+}
+
+/* Formularze */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="text"], select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button.red {
+    background-color: #f44336;
+}
+
+button.red:hover {
+    background-color: #d32f2f;
+}
+
+button.gray {
+    background-color: #757575;
+}
+
+button.gray:hover {
+    background-color: #616161;
+}
+
+/* Wiadomości */
+.message {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    display: none;
+}
+
+.message.success {
+    color: green;
+    background-color: #e6ffe6;
+}
+
+.message.error {
+    color: red;
+    background-color: #ffe6e6;
+}
+
+/* Modal */
+#editModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Wyśrodkowanie w pionie i poziomie */
+    background-color: rgba(0, 0, 0, 0.5); /* Półprzezroczyste tło */
+    display: none; /* Ukryte domyślnie */
+    width: 100%;
+    height: 100%;
+    z-index: 1000; /* Zapewnia, że modal jest nad innymi elementami */
+}
+
+/* Styl dla kontenera w modalu */
+#editModal > div {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    max-width: 90%; /* Zapewnia responsywność */
+    margin: auto; /* Środek w poziomie */
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Lista linków */
+.links div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.links div:last-child {
+    border-bottom: none;
+}
+
+.links span {
+    flex: 1;
+}
+
+.links .edit-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.links .edit-button:hover {
+    background-color: #45a049;
+}
+
+/* Stopka */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 12px;
+    color: #666;
+    background-color: #f4f4f4;
+}

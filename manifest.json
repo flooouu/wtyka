@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "Link Checker",
+    "version": "1.0",
+    "description": "Adam Lisowski Praca",
+    "permissions": [
+        "storage",
+        "activeTab",
+        "tabs", 
+        "https://deletelink-z7s7pe3uva-uc.a.run.app/",
+        "https://us-central1-analiza-linkow.cloudfunctions.net/*"
+    ],
+    "browser_action": {
+        "default_icon": {
+            "16": "icon16.png",
+            "48": "icon48.png",
+            "128": "icon128.png"
+        }
+    },
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    }
+}

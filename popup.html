@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Link Checker</h1>
+    </header>
+
+    <main>
+        <!-- Sekcja dodawania linku -->
+        <section class="section">
+            <h2>Dodaj Nowy Link</h2>
+            <div class="form-group">
+                <input type="text" id="manualUrlInput" placeholder="Wpisz URL...">
+                <select id="manualStatusSelect">
+                    <option value="dobry">Dobry</option>
+                    <option value="podejrzany">Podejrzany</option>
+                </select>
+                <button id="addLinkButton">Dodaj Link</button>
+            </div>
+            <div id="resultMessage" class="message"></div>
+        </section>
+
+        <!-- Sekcja sprawdzania linku -->
+        <section class="section">
+            <h2>Sprawdź Link</h2>
+            <div class="form-group">
+                <input type="text" id="checkUrl" placeholder="Wpisz URL do sprawdzenia">
+                <label class="checkbox">
+                    <input type="checkbox" id="useModel"> Sprawdź za pomocą modelu
+                </label>
+                <button id="checkLink">Sprawdź</button>
+            </div>
+            <div id="resultSection">
+                <div id="checkResult" class="message"></div>
+                <button id="addToDatabase" style="display:none;">Dodaj do bazy danych</button>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Lista Linków</h2>
+            <div class="form-group">
+                <select id="sortOptions">
+                    <option value="default">Sortuj według</option>
+                    <option value="status">Status</option>
+                    <option value="timestamp">Data dodania</option>
+                </select>
+            </div>
+            <div id="linkContainer" class="links"></div>
+        </section>
+        
+
+        <!-- Modal do edycji linku -->
+        <div id="editModal" class="modal">
+            <div class="modal-content">
+                <h3>Edytuj Link</h3>
+                <label for="editUrl">URL:</label>
+                <input type="text" id="editUrl" placeholder="Zmień URL">
+                <label for="editStatus">Status:</label>
+                <select id="editStatus">
+                    <option value="dobry">Dobry</option>
+                    <option value="podejrzany">Podejrzany</option>
+                </select>
+                <div class="modal-actions">
+                    <button id="saveEdit" class="btn green">Zapisz</button>
+                    <button id="deleteLink" class="btn red">Usuń</button>
+                    <button id="cancelEdit" class="btn gray">Anuluj</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Link Checker © 2024</p>
+    </footer>
+
+    <script src="popup.js"></script>
+</body>
+</html>
